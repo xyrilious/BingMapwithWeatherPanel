@@ -1,0 +1,32 @@
+﻿<Window x:Class="BingMapXyrilleMamalateoNew.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        xmlns:local="clr-namespace:BingMapXyrilleMamalateoNew"
+        mc:Ignorable="d"
+        Title="BingMapWindow" Height="450" Width="800">
+    <Grid Margin="0,0,368,0">
+        <m:Map x:Name="myMap" CredentialsProvider="s4uMRVCMK1I9mq8RP109~_r-1j0507QeHK0JE-sR20A~ApvJJsDcA_9OAvJK4lCURT7W39L8sLSHeOjQ3JaSScbC3gUjHJY5Z_OsdqvQA1tK" Mode="Aerial"
+               Center="37.806029,-122.407007" ZoomLevel="16"  AnimationLevel="None" MouseDoubleClick="MyMap_MouseDoubleClick" Margin="0,0,0,10"/>
+
+        <m:MapPolygon Fill="Blue" Stroke="Green" StrokeThickness="5" 
+                          Locations="47.6424,-122.3219 47.8424,-122.1747 47.5814,-122.1747" 
+                          Opacity="0.7" Margin="0,0,613,0">
+
+        </m:MapPolygon>
+
+        <m:MapPolyline Stroke="Blue" StrokeThickness="5" 
+                 Locations="47.6424,-122.3219 47.8424,-122.1747 47.5814,-122.1747 47.67856,-122.130994" 
+                 Opacity="0.7" Margin="0,0,613,0"/>
+
+        <Label Name="lblSummary" Content="Summary:" Margin="442,2,-359,356" FontSize="22"></Label>
+        <Label x:Name="lblTemperature" Content="Temperature:" Margin="442,69,-354,299" FontSize="22"/>
+        <Label x:Name="lblHumidity" Content="Humidity:" Margin="442,126,-359,242" FontSize="22"/>
+        <Label x:Name="lblWindSpeed" Content="WindSpeed:" Margin="438,183,-359,185" FontSize="22"/>
+        <Label x:Name="lblDateTime" Content="Date Time:" Margin="442,240,-359,124" FontSize="22"/>
+        <Image  x:Name="imageWeatherPanel" HorizontalAlignment="Left" Height="95" VerticalAlignment="Top" Width="126" Margin="552,313,-254,0"/>
+
+    </Grid>
+</Window>
